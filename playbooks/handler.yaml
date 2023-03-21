@@ -16,7 +16,7 @@
       - Restart Apache
   - name: Install mysql
     yum:
-      name: mysql
+      name: default-mysql status
       state: installed
     notify:
       - Restart Apache

@@ -2,12 +2,12 @@
 # tasks file for dbrole
 - name: Install DB
   yum:
-    name: "{{db}}"
+    name: "{{ db1 }}"
     state: installed
   notify:
     - Start DB
 
 - name: Display DB installed
   debug:
-    msg: "{{db}}"
+    msg: "{{ db1 }}"
     

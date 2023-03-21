@@ -1,3 +1,4 @@
 ---
 # vars file for dbrole
-db: mysql
+#mysql cannot be found. so workaround is to point to a local folder
+db1: '/home/douglas/Downloads/mysql.deb'
