@@ -1,0 +1,29 @@
+---
+# tasks file for apache
+- name: Update all packages
+  yum:
+    name: '*'
+    state: latest
+  notify:
+    - Restart Apache
+- name: Install Apache
+  yum:
+    name: httpd
+    state: installed
+  notify:
+    - Restart Apache
+- name: Create HTML File
+  shell:
+    cmd: echo "Hanuka Matata" > /var/www/html/index.html
+  args:
+    executable: /bin/bash
+  notify:
+    - Restart Apache
+
+- name: Public IP
+  shell:
+    cmd: curl http://169.254.169.254/latest/meta-data/public-ipv4
+  register: curly
+- debug: var=curly.stdout_lines
+  notify:
+    - Restart Apache

@@ -1,0 +1,7 @@
+- hosts: localhost
+  vars:
+    basic_var: lorum ipsium
+  tasks:
+  - name: Display Value
+    debug:
+      msg: "{{basic_var}}"

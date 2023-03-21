@@ -1,0 +1,6 @@
+---
+# handlers file for dbrole
+- name: Start DB
+  service:
+    name: "{{db}}"
+    state: started

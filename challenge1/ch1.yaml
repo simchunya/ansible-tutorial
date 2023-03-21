@@ -1,0 +1,16 @@
+all:
+  hosts:
+    mail.mycorp.local:
+    smtp.mycorp.local:
+    auth.mycorp.local:
+  children:
+    domain_controllers:
+      dc01.mycorp.local:
+      dc02.mycorp.local:
+    itlappsrv:
+      london_app_servers:
+        app01.ldn.mycorp.local:
+        app02.ldn.mycorp.local:
+      texas_app_servers:
+        app03.tx.mycorp.local:
+        app04.tx.mycorp.local:

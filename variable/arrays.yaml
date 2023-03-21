@@ -1,0 +1,12 @@
+- hosts: localhost
+  vars:
+    courses:
+    - foo
+    - bar
+    - docker
+    - kubernetes
+    - ansible
+  tasks:
+  - name: Display Value
+    debug:
+      msg: "{{courses[4]}}"

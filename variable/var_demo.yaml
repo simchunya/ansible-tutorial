@@ -1,0 +1,16 @@
+- hosts: localhost
+  vars_files:
+    - vars.yaml
+  tasks:
+  - name: Display Value 1
+    debug:
+      msg: "{{first}}"
+  - name: Display Value 2
+    debug:
+      msg: "{{second}}"
+  - name: Display Value 3
+    debug:
+      msg: "{{third}}"
+  - name: Display Value 4
+    debug:
+      msg: "{{fourth}}"
